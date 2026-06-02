@@ -47,9 +47,8 @@ export default function ResumeUpload() {
         body: formData,
       });
       const data = await response.json();
-      console.log("API Response:", data);
+      
       if (data.success) {
-        console.log("Setting analysis state with:",data.analysis);
         setAnalysis(data.analysis);
        
       } else {
