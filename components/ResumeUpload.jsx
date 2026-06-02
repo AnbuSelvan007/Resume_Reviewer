@@ -74,46 +74,23 @@ export default function ResumeUpload() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(86,98,255,0.16),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(0,194,255,0.12),_transparent_28%),linear-gradient(180deg,_#0a0b0f_0%,_#0d1117_45%,_#090a0d_100%)]" />
         <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:44px_44px]" />
 
-        <motion.div
-          animate={{
-            x: [0, 120, 0],
-            y: [0, -60, 0],
-            scale: [1, 1.08, 1],
-          }}
-          transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full bg-indigo-500/12 blur-3xl"
-        />
 
         <motion.div
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 90, 0],
-            scale: [1, 1.12, 1],
-          }}
-          transition={{ duration: 24, repeat: Infinity, repeatType: "reverse" }}
           className="absolute bottom-[-80px] right-[-60px] h-[360px] w-[360px] rounded-full bg-cyan-400/10 blur-3xl"
         />
       </div>
 
 
       <div className="min-h-screen px-4 py-12 sm:px-6">
-        <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center">
+        <div className="mx-auto flex  min-h-screen max-w-6xl flex-col items-center justify-center">
           {/* Hero */}
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
             className="max-w-4xl text-center"
           >
             <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.1, type: "spring" }}
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-400/20 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
             >
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               >
                 <Sparkles size={15} className="text-indigo-300" />
               </motion.div>
@@ -135,9 +112,6 @@ export default function ResumeUpload() {
 
           {/* Main Card */}
           <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
             className="mt-12 w-full max-w-4xl"
           >
             <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.045] shadow-[0_20px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
@@ -227,8 +201,6 @@ export default function ResumeUpload() {
                             </div>
 
                             <motion.button
-                              whileHover={{ scale: 1.03 }}
-                              whileTap={{ scale: 0.97 }}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setFile(null);
@@ -266,8 +238,6 @@ export default function ResumeUpload() {
 
                     {/* Analyze Button */}
                     <motion.button
-                      whileHover={file ? { scale: 1.01 } : {}}
-                      whileTap={file ? { scale: 0.985 } : {}}
                       disabled={!file || analyzing}
                       onClick={handleAnalyze}
                       className="

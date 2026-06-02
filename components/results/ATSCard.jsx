@@ -32,10 +32,7 @@ export default function ATSCard({ score }) {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+    <div
       className="overflow-hidden rounded-[28px] border border-white/10 bg-[#10131a]/95 shadow-[0_24px_70px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
     >
       <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -94,9 +91,6 @@ export default function ATSCard({ score }) {
 
           <div className="h-3 overflow-hidden rounded-full bg-white/[0.07] ring-1 ring-inset ring-white/6">
             <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${score}%` }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
               className={`relative h-full rounded-full bg-gradient-to-r ${getBarColor()}`}
             >
               <motion.div
@@ -112,6 +106,6 @@ export default function ATSCard({ score }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

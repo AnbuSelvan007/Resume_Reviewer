@@ -28,8 +28,6 @@ export default function ProjectsSection({ projects }) {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ y: -4, scale: 1.01 }}
-              transition={{ duration: 0.2 }}
               className="group rounded-[22px] border border-white/10 bg-white/[0.035] p-5 transition-all duration-300 hover:border-indigo-300/20 hover:bg-white/[0.05]"
             >
               <div className="flex items-start justify-between gap-4">

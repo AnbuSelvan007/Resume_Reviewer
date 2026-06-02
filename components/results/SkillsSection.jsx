@@ -10,8 +10,6 @@ export default function SkillsSection({
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <motion.section
-        whileHover={{ y: -4 }}
-        transition={{ duration: 0.2 }}
         className="overflow-hidden rounded-[26px] border border-white/10 bg-[#10131a]/95 shadow-[0_20px_60px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
       >
         <div className="h-px w-full bg-gradient-to-r from-transparent via-emerald-300/30 to-transparent" />
@@ -46,8 +44,6 @@ export default function SkillsSection({
       </motion.section>
 
       <motion.section
-        whileHover={{ y: -4 }}
-        transition={{ duration: 0.2 }}
         className="overflow-hidden rounded-[26px] border border-white/10 bg-[#10131a]/95 shadow-[0_20px_60px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
       >
         <div className="h-px w-full bg-gradient-to-r from-transparent via-red-300/30 to-transparent" />
